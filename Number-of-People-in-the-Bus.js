@@ -23,4 +23,4 @@ let number = (busStops) => {
   return result;
 }
 
-BigO: O(n)
+// BigO: O(n)
