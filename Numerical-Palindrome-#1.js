@@ -30,4 +30,4 @@ function palindrome(num) {
   return true;
 } 
 
-// BigO: O(n / 2)
+// BigO: O(n)
