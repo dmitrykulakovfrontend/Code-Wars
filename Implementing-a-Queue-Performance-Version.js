@@ -60,4 +60,4 @@ Queue.prototype.size = function() {
   return this.length
 };
 
-// BigO: O(n)
+// BigO: O(1)
