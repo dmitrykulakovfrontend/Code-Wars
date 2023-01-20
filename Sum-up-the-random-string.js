@@ -1,25 +1,25 @@
 /*
-  Deoxyribonucleic acid (DNA) is a chemical found in the nucleus of cells and carries the "instructions" for the development and functioning of living organisms.
-  If you want to know more: http://en.wikipedia.org/wiki/DNA
-  In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". Your function receives one side of the DNA (string, except for Haskell);
-  you need to return the other complementary side. DNA strand is never empty or there is no DNA at all (again, except for Haskell).
-  More similar exercise are found here: http://rosalind.info/problems/list-view/ (source)
+  Given a random string consisting of numbers, letters, symbols, you need to sum up the numbers in the string.
+
+  Note:
+
+  Consecutive integers should be treated as a single number. eg, 2015 should be treated as a single number 2015, NOT four numbers
+  All the numbers should be treaded as positive integer. eg, 11-14 should be treated as two numbers 11 and 14. Same as 3.14, should be treated as two numbers 3 and 14
+  If no number was given in the string, it should return 0
+  Example:
+
+  str = "In 2015, I want to know how much does iPhone 6+ cost?"
+  The numbers are 2015, 6
+
+  Sum is 2021.
 */
 
 // Answer:
 
-function DNAStrand(dna){
-  const complements = {
-    'A': 'T',
-    'T': 'A',
-    'C': 'G',
-    'G': 'C',
-  }
-  let result = '';
-  for (let char of dna) {
-    result += complements[char]
-  }
-  return result;
+function sumFromString(str){
+  let result = 0;
+  str.replace(/\d+/g,(match) => result += +match)
+  return result
 }
 
 // BigO: O(n)
