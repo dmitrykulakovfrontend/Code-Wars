@@ -1,4 +1,4 @@
-*
+/*
 In the following 6 digit number:
 
 283910
@@ -15,13 +15,13 @@ The number will be passed in as a string of only digits. It should return a five
 
 // Answer:
 
-function solution(numbers){
+function solution(numbers) {
   let biggest = 0;
-  for (let i = 0; i <= numbers.length - 5;i++) {
-    let digits = +numbers.slice(i,i + 5);
+  for (let i = 0; i <= numbers.length - 5; i++) {
+    let digits = +numbers.slice(i, i + 5);
     biggest = Math.max(biggest, digits);
   }
-  return biggest
+  return biggest;
 }
 
 // BigO: O(n) because instead of slice we could just find 5 digits by numbers[i + digitOffset]
